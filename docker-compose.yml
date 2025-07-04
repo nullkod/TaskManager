@@ -14,10 +14,11 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: task_app_frontend
+    command: npm run dev -- --host 0.0.0.0 --port 3000
     ports:
       - 3000:3000
-    volumes:  
-      - ./frontend:/app
+    # volumes:  
+    #   - ./frontend:/app
     # depends_on:
     #   - backend
 
